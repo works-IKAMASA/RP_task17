@@ -9,8 +9,8 @@ const opiskelija = {
   },
   add: function(opiskelija, callback) {
     return db.query(
-      'insert into opiskelija (Etunimi,Sukunimi,Opiskelijanumero,Luokkatunnus,Osoite) values(?,?,?,?,?)',
-      [opiskelija.Etunimi, opiskelija.Sukunimi, opiskelija.Opiskelijanumero,opiskelija.Luokkatunnus,opiskelija.Osoite],
+      'insert into opiskelija (Etunimi,Sukunimi,Opiskelijanumero,Luokkatunnus) values(?,?,?,?)',
+      [opiskelija.Etunimi, opiskelija.Sukunimi, opiskelija.Opiskelijanumero,opiskelija.Luokkatunnus],
       callback
     );
   },
@@ -19,8 +19,8 @@ const opiskelija = {
   },
   update: function(id, opiskelija, callback) {
     return db.query(
-      'update opiskelija set Etunimi=?,Sukunimi=?,Opiskelijanumero=?, Luokkatunnus=?, Osoite=? where idOpiskelija=?',
-      [opiskelija.Etunimi, opiskelija.Sukunimi, opiskelija.Opiskelijanumero,opiskelija.Luokkatunnus,opiskelija.Osoite, id],
+      'update opiskelija set Etunimi=?,Sukunimi=?,Opiskelijanumero=?,Luokkatunnus=? where idOpiskelija=?',
+      [opiskelija.Etunimi, opiskelija.Sukunimi, opiskelija.Opiskelijanumero,opiskelija.Luokkatunnus, id],
       callback
     );
   }

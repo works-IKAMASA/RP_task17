@@ -19,7 +19,7 @@ const arviointi = {
   },
   update: function(id, arviointi, callback) {
     return db.query(
-      'update arviointi set Arvosana=?,Paivays=?, idOpiskelija=?, idOpintojakso where idArviointi=?',
+      'update arviointi set Arvosana=?,Paivays=?, idOpiskelija=?, idOpintojakso=? where idArviointi=?',
       [arviointi.Arvosana, arviointi.Paivays, arviointi.idOpiskelija, arviointi.idOpintojakso, id],
       callback
     );
