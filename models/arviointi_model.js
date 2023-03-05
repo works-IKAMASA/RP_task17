@@ -1,6 +1,6 @@
 const db = require('../database');
 
-const book = {
+const arviointi = {
   getAll: function(callback) {
     return db.query('select * from arviointi', callback);
   },

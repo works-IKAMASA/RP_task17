@@ -1,6 +1,6 @@
 const db = require('../database');
 
-const borrower = {
+const opintojakso = {
   getAll: function(callback) {
     return db.query('select * from opintojakso', callback);
   },

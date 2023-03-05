@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const book = require('../models/borrower_model');
+const opintojakso = require('../models/opintojakso_model');
 
 router.get('/',
     function (request, response) {
-        book.getAll(function (err, dbResult) {
+        opintojakso.getAll(function (err, dbResult) {
             if (err) {
                 response.json(err);
             } else {
@@ -16,7 +16,7 @@ router.get('/',
 
 router.get('/:id',
     function (request, response) {
-        book.getById(request.params.id, function (err, dbResult) {
+        opintojakso.getById(request.params.id, function (err, dbResult) {
             if (err) {
                 response.json(err);
             } else {
@@ -28,7 +28,7 @@ router.get('/:id',
 
 router.post('/', 
 function(request, response) {
-  book.add(request.body, function(err, dbResult) {
+  opintojakso.add(request.body, function(err, dbResult) {
     if (err) {
       response.json(err);
     } else {
@@ -40,7 +40,7 @@ function(request, response) {
 
 router.delete('/:id', 
 function(request, response) {
-  book.delete(request.params.id, function(err, dbResult) {
+  opintojakso.delete(request.params.id, function(err, dbResult) {
     if (err) {
       response.json(err);
     } else {
@@ -52,7 +52,7 @@ function(request, response) {
 
 router.put('/:id', 
 function(request, response) {
-  book.update(request.params.id, request.body, function(err, dbResult) {
+  opintojakso.update(request.params.id, request.body, function(err, dbResult) {
     if (err) {
       response.json(err);
     } else {
