@@ -19,6 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/arviointi', arviointiRouter);
 app.use('/opintojakso', opintojaksoRouter);
-app.use('./opiskelija', opiskelijaRouter);
+app.use('/opiskelija', opiskelijaRouter);
 
 module.exports = app;
